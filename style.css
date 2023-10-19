@@ -131,6 +131,7 @@ bode{
 
 /* Slider arrows*/
 .slider-arrows {
+    position: relative;
     grid-area: slider-arrows;
 }
 
@@ -143,7 +144,9 @@ bode{
 }
 
 .slider-arrows__nav {
-
+    position: absolute;
+    left:0;
+    top:50%;
 }
 
 .slider-arrows__arrow {

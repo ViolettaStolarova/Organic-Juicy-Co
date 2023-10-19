@@ -1,1 +1,1 @@
-# Organic-Juicy-Co.
+# Organic-Juicy-Co

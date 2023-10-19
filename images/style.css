@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300;400;900&family=PT+Sans&family=Secular+One&display=swap');
+
+/* 
+font-family: 'Fira Sans Condensed', sans-serif; 300 400 900 для заголовков
+font-family: 'PT Sans', sans-serif; 400 для обычного текста
+font-family: 'Secular One', sans-serif; 400 для логотипа
+ */
+
+bode{
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.container{
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+/* HEADER */
+.header {
+    display: grid;
+    grid-template-rows: max-content;
+    grid-template-columns: 1fr 1fr 100px;
+    grid-template-areas: "logo nav search";
+    align-items: center;
+    justify-items: left;
+
+    padding: 20px 0;
+
+    text-transform: uppercase;
+    overflow: hidden;
+}
+
+.logo {
+    grid-area: logo;
+    justify-self: end;
+
+    font-family: 'Secular One';
+    font-weight: 400;
+    color: #FF4747; 
+    font-size: 24px;
+    width: 150px;
+    line-height: 1;
+
+    transition: 0.3s;
+
+}
+.header__nav {
+    grid-area: nav;
+
+}
+
+.header__nav ul {
+    display: flex;
+    gap: 10px;
+}
+
+.header__nav ul  a{
+    position: relative;
+    display: inline-block;
+
+    padding: 15px;
+    transition: color 0.2s;
+}
+
+.header__nav ul a:hover, .logo:hover {
+    color: #01BCB5;
+}
+
+.header__nav ul a:active{
+    position: absolute;
+
+    color: #178f8b;
+}
+
+.header__nav ul a::after{
+    position: absolute;
+    left: 15px;
+    bottom: -150%;
+
+    content: "";
+    display: block;
+
+    width: 80%;
+    height: 100%;
+
+    background-color: #01BCB5;
+
+    transition: bottom 0.5s, background-color 0.2s;
+}
+
+.header__nav ul a:hover::after{
+    bottom: -75%;
+}
+
+.header__nav ul a:active::after{
+    background-color: #178f8b;
+}
+
+.search {
+    grid-area: search;
+
+}
+
+.search__icon{
+    transition: fill 0.2s;
+}
+
+.search__icon:hover{
+    fill: #01BCB5;
+}
+
+.search__icon:active{
+    fill: #178f8b;
+}
+
+/* MAIN */
+.main {
+    display:grid;
+    /* grid-template-columns: 2fr 1fr 1.5fr 1.5fr;
+    grid-template-rows: 3fr 1fr 3fr;
+    grid-template-areas: "slider-arrows healthy thirsty thirsty"
+                         "slider-arrows healthy slider-dots orange"
+                         "freshy healthy slider-dots orange"; */
+    grid-template: "slider-arrows healthy thirsty thirsty" 3fr
+                   "slider-arrows healthy slider-dots orange" 1fr
+                   "freshy healthy slider-dots orange" 3fr
+                   / 2fr 1fr 1.5fr 1.5fr;
+}
+
+/* Slider arrows*/
+.slider-arrows {
+    grid-area: slider-arrows;
+}
+
+.slider-arrows__items-wrapper {
+    
+}
+
+.slider-arrows__item {
+
+}
+
+.slider-arrows__nav {
+
+}
+
+.slider-arrows__arrow {
+
+}
+
+.slider-arrows__arrow-left {
+
+}
+
+.btn {
+
+}
+
+.slider-arrows__btn {
+
+}
+
+.slider-arrows__arrow-right {
+
+}

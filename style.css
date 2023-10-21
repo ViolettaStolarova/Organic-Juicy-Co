@@ -496,7 +496,6 @@ button {
 
     color:#9999998f;
     font-size: 12px;
-
 }
 
 /* Juicy */
@@ -525,7 +524,6 @@ button {
     height: 44px;
     margin-top: 15px;
 }
-
 
 /* Adaptive */
 @media (max-width: 1330px) {

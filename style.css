@@ -45,7 +45,7 @@ button {
     grid-template-columns: 2fr 1fr 2.5fr 0.5fr;
     grid-template-areas: ". logo nav search";
     align-items: center;
-    justify-items: left;
+    justify-items: start;
 
     padding: 20px 0;
 
@@ -70,7 +70,7 @@ button {
 .header__nav {
     grid-area: nav;
 
-    transform: translateX(-15px);
+    transform: translate(-15px);
 }
 
 .header__nav ul {
@@ -89,8 +89,6 @@ button {
     color: #01BCB5;
 }
 .header__nav ul a:active{
-    position: absolute;
-
     color: #178f8b;
 }
 .header__nav ul a::after{

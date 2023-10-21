@@ -158,7 +158,6 @@ button {
     filter: brightness(80%);
 
     display: flex;
-
 }
 
 .slider-arrows__nav {
@@ -757,3 +756,16 @@ button {
     overflow: hidden;
 }
 
+
+
+.slider-arrows__item, .slider-dots__item{
+    animation: fade 0.7s;
+}
+@keyframes fade{
+    0%{
+        opacity: 0.6;
+    }
+    100%{
+        opacity:1;
+    }
+}

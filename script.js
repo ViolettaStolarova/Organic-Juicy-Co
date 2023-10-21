@@ -31,5 +31,37 @@ function showSlideArrows(n){
     slidesArrows.forEach(slide => slide.style.display = 'none');
     slidesArrows[slideIndex].style.display = 'block';
 };
-
 showSlideArrows(0);
+
+// Slider with dots
+const sliderDots = document.querySelector('.main__slider-dots');
+      slidesDots = sliderDots.querySelectorAll('.slider-dots__item'),
+      wrapperForDots = sliderDots.querySelector('.slider-dots__nav');
+
+const dots = [];
+for(let i = 0; i < slidesDots.length; i++){
+    const dot = document.createElement('button');
+    
+    dot.dataset.slideTo = i;
+    dot.classList.add('slider-dots__nav-item');
+
+    if(i == 0){
+        dot.classList.add('slider-dots__nav-item-active');
+    }
+    if(i != 0){
+        slidesDots[i].style.display = 'none';
+    }
+
+    dot.addEventListener('click', showSlideDots);
+    wrapperForDots.append(dot);
+    dots.push(dot);
+}
+
+function showSlideDots (event){
+    const slideTo = event.target.dataset.slideTo;
+    slidesDots.forEach(slide => slide.style.display = 'none');
+    slidesDots[slideTo].style.display = 'block';
+
+    dots.forEach(dot => dot.classList.remove('slider-dots__nav-item-active'));
+    event.target.classList.add('slider-dots__nav-item-active');
+}
